@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="class">
+        <attribute name="productName" optional="YES" attributeType="String"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="own" inverseEntity="User"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="favorits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product"/>
+        <relationship name="own" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="owner" inverseEntity="Product"/>
+    </entity>
+    <elements>
+        <element name="Product" positionX="140.6632080078125" positionY="16.28634643554688" width="128" height="73"/>
+        <element name="User" positionX="341.2599487304688" positionY="26.03411865234375" width="128" height="118"/>
+    </elements>
+</model>
