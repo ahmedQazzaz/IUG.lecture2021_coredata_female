@@ -15,16 +15,11 @@
         <attribute name="username" optional="YES" attributeType="String"/>
         <relationship name="favorits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="favoritBy" inverseEntity="Product"/>
         <relationship name="myProducts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="owner" inverseEntity="Product"/>
-        <uniquenessConstraints>
-            <uniquenessConstraint>
-                <constraint value="username"/>
-            </uniquenessConstraint>
-        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Product" positionX="140.6632080078125" positionY="16.28634643554688" width="128" height="74"/>
-        <element name="User" positionX="341.2599487304688" positionY="26.03411865234375" width="128" height="104"/>
         <element name="Admin" positionX="252" positionY="72" width="128" height="44"/>
         <element name="Client" positionX="261" positionY="81" width="128" height="29"/>
+        <element name="Product" positionX="140.6632080078125" positionY="16.28634643554688" width="128" height="74"/>
+        <element name="User" positionX="341.2599487304688" positionY="26.03411865234375" width="128" height="104"/>
     </elements>
 </model>
